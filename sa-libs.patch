@@ -14,7 +14,7 @@
  	$(SHTOOL) install -c -m 644 sa.h $(DESTDIR)$(includedir)/
  	$(SHTOOL) install -c -m 644 sa.3 $(DESTDIR)$(mandir)/man3/
 -	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libsa.la $(DESTDIR)$(libdir)/
-+	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 755 libsa.la $(DESTDIR)$(libdir)/
++	@$(LIBTOOL) --mode=install $(SHTOOL) install -c libsa.la $(DESTDIR)$(libdir)/
  
  uninstall:
  	@$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(libdir)/libsa.la
