@@ -1,0 +1,11 @@
+--- sa-1.2.2/Makefile.in~	2004-04-02 20:17:31.000000000 +0200
++++ sa-1.2.2/Makefile.in	2004-11-28 02:50:50.000000000 +0100
+@@ -69,7 +69,7 @@
+ 
+ $(LIB_NAME): $(LIB_OBJS)
+ 	@$(LIBTOOL) --mode=link $(CC) -o $(LIB_NAME) $(LIB_OBJS) -rpath $(libdir) \
+-	    -version-info `$(SHTOOL) version -l txt -d libtool VERSION`
++	    -version-info `$(SHTOOL) version -l txt -d libtool VERSION` $(LIBS)
+ 
+ $(TST_NAME): $(TST_OBJS) $(LIB_NAME)
+ 	@$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $(TST_NAME) $(TST_OBJS) $(LIB_NAME) $(LIBS)
