@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# don't perform "make test"
+%bcond_without	tests	# don't perform "make check"
 #
 Summary:	OSSP sa - Socket Abstraction
 #Summary(pl):	OSSP sa - biblioteka 
@@ -12,6 +12,7 @@ License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/sa/%{name}-%{version}.tar.gz
 # Source0-md5:	757d5298581d9b9a3d71147fba542509
+Patch0:		%{name}-libs.patch
 URL:		http://www.ossp.org/pkg/lib/sa/
 BuildRequires:	ex-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,6 +54,7 @@ OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
