@@ -3,7 +3,7 @@
 %bcond_without	tests	# don't perform "make check"
 #
 Summary:	OSSP sa - Socket Abstraction
-#Summary(pl):	OSSP sa - biblioteka 
+Summary(pl):	OSSP sa - biblioteka abstrakcji gniazd
 Name:		sa
 Version:	1.2.2
 Release:	0.1
@@ -18,27 +18,32 @@ BuildRequires:	ex-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SSP sa is an abstraction library for the Unix socket application
+OSSP sa is an abstraction library for the Unix socket application
 programming interface (API) featuring stream and datagram oriented
 communication over Unix Domain and Internet Domain (TCP and UDP)
 sockets. It provides the following key features: address abstraction
 (local, IPv4, and IPv6), type abstraction, I/O timeouts, I/O stream
 buffering and convenience I/O functions.
 
-#%description -l pl
-# TODO
+%description -l pl
+OSSP sa to biblioteka abstrakcji dla uniksowego API gniazd z obs³ug±
+komunikacji zorientowanej na strumienie i datagramy poprzez gniazda
+uniksowe i internetowe (TCP i UDP). Kluczowe mo¿liwo¶ci to: abstrakcja
+adresów (lokalnych, IPv4, IPv6), abstrakcja typów, timeouty
+wej¶cia/wyj¶cia, timeouty buforowania strumieni i wygodne funkcje
+wej¶cia/wyj¶cia.
 
 %package devel
-Summary:	OSSP sa - Socket Abstraction - header files and development libraries
-Summary(pl):	OSSP sa - biblioteka Socket Abstraction - pliki nag³ówkowe i biblioteki dla deweloperów
+Summary:	OSSP sa - Socket Abstraction - header files
+Summary(pl):	OSSP sa - biblioteka Socket Abstraction - pliki nag³ówkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
-OSSP sa - Socket Abstraction - header files and development libraries
+OSSP sa - Socket Abstraction - header files.
 
 %description devel -l pl
-OSSP sa - biblioteka Socket Abstraction - pliki nag³ówkowe i biblioteki dla deweloperów
+OSSP sa - biblioteka Socket Abstraction - pliki nag³ówkowe.
 
 %package static
 Summary:	OSSP sa - Socket Abstraction - static libraries
