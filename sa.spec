@@ -1,17 +1,18 @@
 #
 # Conditional build:
+%bcond_without  static_libs # don't build static libraries
 %bcond_without	tests	# don't perform "make check"
 #
 Summary:	OSSP sa - Socket Abstraction
 Summary(pl):	OSSP sa - biblioteka abstrakcji gniazd
 Name:		sa
-Version:	1.2.4
+Version:	1.2.5
 Release:	0.1
 Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/sa/%{name}-%{version}.tar.gz
-# Source0-md5:	b7fa70bef195f81fa72f2471d47b793c
+# Source0-md5:	1393db6eeaf229746c245fe9cf65c93b
 Patch0:		%{name}-libs.patch
 URL:		http://www.ossp.org/pkg/lib/sa/
 BuildRequires:	ex-devel
@@ -63,7 +64,8 @@ OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne.
 
 %build
 %configure \
-	--with-ex
+	--with-ex \
+	--enable-static=%{?with_static_libs:yes}%{!?with_static_libs:no}
 %{__make}
 
 %{?with_tests:%{__make} check}
@@ -91,8 +93,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/*
+%{_pkgconfigdir}/*.pc
 %{_mandir}/man3/*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.a
+%endif
