@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP sa - Socket Abstraction
-Summary(pl.UTF-8):   OSSP sa - biblioteka abstrakcji gniazd
+Summary(pl.UTF-8):	OSSP sa - biblioteka abstrakcji gniazd
 Name:		sa
 Version:	1.2.5
 Release:	0.1
@@ -36,7 +36,7 @@ wejścia/wyjścia.
 
 %package devel
 Summary:	OSSP sa - Socket Abstraction - header files
-Summary(pl.UTF-8):   OSSP sa - biblioteka Socket Abstraction - pliki nagłówkowe
+Summary(pl.UTF-8):	OSSP sa - biblioteka Socket Abstraction - pliki nagłówkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -48,7 +48,7 @@ OSSP sa - biblioteka Socket Abstraction - pliki nagłówkowe.
 
 %package static
 Summary:	OSSP sa - Socket Abstraction - static libraries
-Summary(pl.UTF-8):   OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne
+Summary(pl.UTF-8):	OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
