@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP sa - Socket Abstraction
-Summary(pl):	OSSP sa - biblioteka abstrakcji gniazd
+Summary(pl.UTF-8):   OSSP sa - biblioteka abstrakcji gniazd
 Name:		sa
 Version:	1.2.5
 Release:	0.1
@@ -26,36 +26,36 @@ sockets. It provides the following key features: address abstraction
 (local, IPv4, and IPv6), type abstraction, I/O timeouts, I/O stream
 buffering and convenience I/O functions.
 
-%description -l pl
-OSSP sa to biblioteka abstrakcji dla uniksowego API gniazd z obs≥ug±
+%description -l pl.UTF-8
+OSSP sa to biblioteka abstrakcji dla uniksowego API gniazd z obs≈ÇugƒÖ
 komunikacji zorientowanej na strumienie i datagramy poprzez gniazda
-uniksowe i internetowe (TCP i UDP). Kluczowe moøliwo∂ci to: abstrakcja
-adresÛw (lokalnych, IPv4, IPv6), abstrakcja typÛw, timeouty
-wej∂cia/wyj∂cia, timeouty buforowania strumieni i wygodne funkcje
-wej∂cia/wyj∂cia.
+uniksowe i internetowe (TCP i UDP). Kluczowe mo≈ºliwo≈õci to: abstrakcja
+adres√≥w (lokalnych, IPv4, IPv6), abstrakcja typ√≥w, timeouty
+wej≈õcia/wyj≈õcia, timeouty buforowania strumieni i wygodne funkcje
+wej≈õcia/wyj≈õcia.
 
 %package devel
 Summary:	OSSP sa - Socket Abstraction - header files
-Summary(pl):	OSSP sa - biblioteka Socket Abstraction - pliki nag≥Ûwkowe
+Summary(pl.UTF-8):   OSSP sa - biblioteka Socket Abstraction - pliki nag≈Ç√≥wkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 OSSP sa - Socket Abstraction - header files.
 
-%description devel -l pl
-OSSP sa - biblioteka Socket Abstraction - pliki nag≥Ûwkowe.
+%description devel -l pl.UTF-8
+OSSP sa - biblioteka Socket Abstraction - pliki nag≈Ç√≥wkowe.
 
 %package static
 Summary:	OSSP sa - Socket Abstraction - static libraries
-Summary(pl):	OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne
+Summary(pl.UTF-8):   OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 OSSP sa - Socket Abstraction - static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 OSSP sa - biblioteka Socket Abstraction - biblioteki statyczne.
 
 %prep
