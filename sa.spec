@@ -6,13 +6,13 @@
 Summary:	OSSP sa - Socket Abstraction
 Summary(pl.UTF-8):	OSSP sa - biblioteka abstrakcji gniazd
 Name:		sa
-Version:	1.2.5
+Version:	1.2.6
 Release:	0.1
 Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/sa/%{name}-%{version}.tar.gz
-# Source0-md5:	1393db6eeaf229746c245fe9cf65c93b
+# Source0-md5:	45317c5529b3ce8acbdaeb93aff4ad16
 Patch0:		%{name}-libs.patch
 URL:		http://www.ossp.org/pkg/lib/sa/
 BuildRequires:	ex-devel
